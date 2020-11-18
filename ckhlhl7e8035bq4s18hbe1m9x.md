@@ -1,6 +1,6 @@
 ## Simple but powerful Coding Practices that you can adopt immediately: Naming and DRY
 
-Everyone can write code with the right focus to learn the basics. Good developers can write code that solves big problems in real life. But the bop developers don't just write awesome code, their code is easily read and understood by other developers.
+Everyone can write code with the right focus to learn the basics. Good developers can write code that solves big problems in real life. But the best developers don't just write awesome code, their code is easily read and understood by other developers.
 
 Take some time to reflect: while coding you use more time writing or reading existing code? I bet it is the second option.
 

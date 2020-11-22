@@ -7,7 +7,7 @@ So I did some research and luckily found Caio and Mike [Essential Developer YouT
 I highly recommend that you watch their series too. I assure you will learn a lot too, even if you don't work with Swift because the concepts explained can be applied in any language. You can find a link to the first episode at the end of this article.
 
 ## TDD is awesome. You must learn how to use it
-It had been about two years since I knew I needed to write unit tests on my codes. I studied several techniques for this, but I couldn't find a way to put It into practice. My codes were difficult to test and I didn't have the tools and the knowledge to write them.
+It had been about two years since I knew I needed to write unit tests on my code. I studied several techniques for this, but I couldn't find a way to put It into practice. My code was difficult to test and I didn't have the tools and the knowledge to write them.
 
 But the way Caio and Mike write tests is just... easy. Easy to follow, easy to understand, and easy to maintain.
 
@@ -137,7 +137,7 @@ In the iOS / Swift world, we have another powerful benefit: we can run the tests
 ## Good code survives changes in the platform or programming language new versions
 Caio and Mike started the series in 2017 when Swift 3 was the newest version. Today we have Swift 5.2 as the newest version.
 
-It is not uncommon in this type of scenario that old code created in such different versions does not work correctly in the current version and are hard to upgrade. This kind of problem scales with every third party dependency the codes has. But if we keep our code with minimum dependency (the business rules shouldn't have any) we can update with no pain.
+It is not uncommon in this type of scenario that old code created in such different versions does not work correctly in the current version and are hard to upgrade. This kind of problem scales with every third party dependency the code has. But if we keep our code with minimum dependency (the business rules shouldn't have any) we can update with no pain.
 
 And again, the tests help a lot in this case, working as a safety net to update without fear.
 

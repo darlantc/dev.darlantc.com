@@ -17,7 +17,7 @@ The process follows the following steps:
 
 **1- Red**: you write a very simple and minimum test to validate something (usually a Class or Struct). It will be red because the system under test (known as SUT) still doesn't exist (compile error). **The test will crash**.
 
-```
+```swift
 import XCTest
 @testable import QuizEngine
 
@@ -32,7 +32,7 @@ class FlowTest: XCTestCase {
 
 **2- Yellow**: you create the SUT (your Class our Struct you are testing) and the methods it needs just to remove compile errors to build. **The test must fail**.
 
-```
+```swift
 class Flow {
 	let questions: [String]
 	
@@ -44,7 +44,7 @@ class Flow {
 
 **3- Green**: you finish the implementation of the SUT with the minimum necessary code just to pass the test. Don't think ahead trying to implement everything upfront. Let the tests guide you.
 
-```
+```swift
 class Flow {
 	let questions: [String]
 	
@@ -58,7 +58,7 @@ class Flow {
 
 **4- Yellow again**: add another test to continue advancing towards your goal:
 
-```
+```swift
 import XCTest
 @testable import QuizEngine
 
@@ -79,7 +79,7 @@ class FlowTest: XCTestCase {
 
 **5- Green again**: fix the init to properly function as expected and the two tests must pass now.
 
-```
+```swift
 class Flow {
 	let questions: [String]
 	
@@ -103,7 +103,7 @@ We've all been there: we've decided that we need to rewrite an entire class beca
 
 Well, Caio and Mike approach to refactor the game Engine is very awesome. They start deprecating class and functions to produce warning errors while maintaining backward compatibility. The first rule is: don't break the existing code for current users.
 
-```
+```swift
 @available(*, deprecated, message: "use Quiz instead")
 public class Game <R: Router> {
     ...

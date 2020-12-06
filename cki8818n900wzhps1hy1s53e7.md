@@ -9,7 +9,7 @@ We use indentation to visually identify these hierarchies in our code. A correct
 
 Consider the following code:
 
-```
+```swift
 class Payment {
 let paymentPerHour: Double
 
@@ -25,7 +25,7 @@ Pretty bad, right? Our brain cannot find a pattern to identify where every metho
 
 Let's fix it with proper identation:
 
-```
+```swift
 class Payment {
     let paymentPerHour: Double
 
@@ -53,7 +53,7 @@ Add whitespace (or blank line if you prefer) to separate these thoughts. The cod
 
 What if our previous code was written without any whitespace?
 
-```
+```swift
 class Payment {
     let paymentPerHour: Double
     init(paymentPerHour: Double) {

@@ -13,7 +13,7 @@ A function is considered pure when it doesn't have external dependencies that ca
 
 Consider the example:
 
-```
+```swift
 func sum(_ a: Int, plus b: Int) -> Int {
 	return a + b
 }
@@ -25,7 +25,7 @@ func add(value: Int) -> Int {
 Can you identify if the functions above are pure?
 
 The sum function is pure because it **always** produces the same result when called with the same inputs, no matter how many times you call it.
-```
+```swift
 func sum(_ a: Int, plus b: Int) -> Int {
 	return a + b
 }
@@ -36,7 +36,7 @@ sum(100, plus: 20) // 120
 ```
 
 But the add function is not pure because it uses an external variable named "totalValue" which can be different in every call. The function cannot control what happens to the dependency and therefore cannot guarantee the result will be consistent.
-```
+```swift
 var totalValue = 0
 
 func add(value: Int) -> Int {
@@ -61,7 +61,7 @@ However, when the code is working as expected the work is not yet complete. Now 
 
 Consider the following fictional problem: the ACME company pays its employees for hours of work in the day. On weekdays the total payment must be $30 per hour. On Saturdays add a bonus of 20% and on Sundays, the payment must be doubled. Let's code it:
 
-```
+```swift
 func calculateHourlyPay(for workingHours: Int, at dayOfWeek: String) -> Double {
 	let paymentPerHour: Double = 30
 	
@@ -88,7 +88,7 @@ Looking good. But now the customer has asked to calculate overtime hours that ex
 
 Ok, should be easy:
 
-```
+```swift
 func calculateHourlyPay(for workingHours: Int, at dayOfWeek: String) -> Double {
 	let paymentPerHour: Double = 30
 
@@ -139,7 +139,7 @@ Look at our last code. Our function does a lot of things right now:
 
 Six responsibilities. We can do better! Let's refactor it:
 
-```
+```swift
 class Payment {
 	let paymentPerHour: Double
 
@@ -171,7 +171,7 @@ class Payment {
 
 First, we refactored it to be a Class and moved the `paymentPerHour` constant to be a property. Now we can easily change this property value whenever necessary or even reuse the class with different `paymentPerHour` values. Let's continue:
 
-```
+```swift
 class Payment {
 	let paymentPerHour: Double
 	
@@ -211,7 +211,7 @@ class Payment {
 
 Second, we created two private methods to calculate normal and overtime hours. Did you notice that the `calculateHourlyPay` method is losing its responsibilities? Let's move on:
 
-```
+```swift
 class Payment {
 	let paymentPerHour: Double
 	
@@ -264,7 +264,7 @@ Third, we created two more private methods to take care of calculating the payme
 
 Just three responsibilities now. I really hope that you get to see the improvement we've made here. Let's finish it?
 
-```
+```swift
 class Payment {
 	let paymentPerHour: Double
 	
